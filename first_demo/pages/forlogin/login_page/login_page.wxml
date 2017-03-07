@@ -1,0 +1,4 @@
+<view class="login_container">
+    <image class="login_logo" src="/images/icons/en.jpg"></image>
+    <text class="login_login" bindtap="onTap">登录</text>
+</view>

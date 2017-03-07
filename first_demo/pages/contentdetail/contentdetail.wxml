@@ -1,0 +1,22 @@
+
+<!--文章详细-->
+<view class="container">
+  <image class="image_header" src="../../images/banner/1012.png"></image>
+  <view class="author_date">
+    <image class="avater" src="../../images/icons/math.jpg"></image>
+    <text class="author">second</text>
+    <text class="const_text">发表于</text>
+    <text class="date">time</text>
+  </view>
+  <text class="title">这里是标题</text>
+  <view class="tool">
+    <view class="circle-img" >
+      <image src="../../images/icons/collection.png"></image>
+      <image class="share-img" src="../../images/icons/share.png"></image>
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail" >
+    这里是正文
+  </text>
+</view>

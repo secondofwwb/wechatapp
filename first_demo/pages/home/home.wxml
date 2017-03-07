@@ -1,0 +1,29 @@
+
+<!--home.wxml-->
+<import src="../../pages/list-template/list-template.wxml" />
+<scroll-view scroll-y="true" style="height:700px;">
+
+  <!--轮播图-->
+  <view>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" style="height:300rpx;">
+      <swiper-item wx:for="{{banners_key}}">
+        <image src="{{item.banner_image}}" class="banner_image"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--各个页面入口-->
+  <view class="icons">
+    <view class="icon" wx:for="{{icons_key}}" wx:for-item="item" bindtap="onTap">
+      <image src="{{item.icon_image}}" class="image"></image>
+      <text class="icon_font">{{item.icon_name}}</text>
+    </view>
+  </view>
+
+  <!--推荐流-->
+  <block wx:for="{{rec_key}}" wx:for-item="item">
+
+    <!--template-->
+    <template is="list" data="{{...item}}" />
+  </block>
+</scroll-view>

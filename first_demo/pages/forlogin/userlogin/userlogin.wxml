@@ -1,0 +1,22 @@
+
+<!--userlogin.wxml-->
+
+<!--logo与名称-->
+<view class="login_container">
+  <view class="login_container">
+    <image class="login_image" src="/images/icons/en.jpg"></image>
+    <text>博弈教育</text>
+  </view>
+</view>
+
+<!--通过微信登录-->
+<view class="login_login">
+  <view>
+    <text class="login_font1">该程序将获得以下授权：\n</text>
+    <text class="login_font2">·获得您的公开信息（昵称、头像）</text>
+  </view>
+</view>
+<view class="login_button">
+  <text class="login_button1">拒绝</text>
+  <text class="login_button2">允许</text>
+</view>

@@ -1,0 +1,20 @@
+
+<!--contentlist.wxml-->
+<import src="../../pages/list-template/list-template.wxml" />
+<view class="navbar">
+  <view class="name">
+    英语
+  </view>
+  <view class="search">
+    <image class="icon" src="../../images/icons/icon_search.png"></image>
+    <text class="search_font">search..</text>
+  </view>
+</view>
+<view style="margin-top:70rpx;"></view>
+<block wx:for="{{rec_key}}" wx:for-item="item">
+
+  <!--template-->
+  <view catchtap="onContentid" data-contentid="{{item.contentid}}">
+    <template is="list" data="{{...item}}" />
+  </view>
+</block>

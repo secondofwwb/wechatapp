@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/contentdetail/contentdetail",
+    "pages/contentlist/contentlist",
+    "pages/forlogin/login_page/login_page",
+    "pages/forlogin/userlogin/userlogin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0383F3",
+    "navigationBarTitleText": "博弈教育",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#0383F3",
+    "selectedColor": "white",
+    "color": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text":"首页"
+      },
+      {
+        "pagePath": "pages/forlogin/login_page/login_page",
+        "text":"我的"
+      }
+    ]
+  }
+}

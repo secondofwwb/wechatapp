@@ -1,0 +1,17 @@
+
+<!--template for list-->
+<template name="list">
+  <view class="rec_container">
+    <view class="rec_title">{{rec_title}}</view>
+    <view>
+      <image src="{{rec_image}}" class="rec_image" mode="aspectFill"></image>
+      <text class="rec_content">{{rec_content}}</text>
+    </view>
+    <view class="rec_like">
+      <image src="/images/icons/chat.png" class="rec_like_icon"></image>
+      <text class="rec_like_content">{{view_num}}</text>
+      <image src="/images/icons/view.png" class="rec_like_icon"></image>
+      <text class="rec_like_content">{{collect_num}}</text>
+    </view>
+  </view>
+</template>
