@@ -19,8 +19,9 @@ Page({
         }
     },
     onContentid:function(event){
+        var contentid = event.currentTarget.dataset.contentid;
         wx.navigateTo({
-          url: "../contentdetail/contentdetail"
+          url: "/pages/contentdetail/contentdetail?id=" + contentid
         })
     }
 })

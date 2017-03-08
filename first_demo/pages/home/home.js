@@ -23,9 +23,10 @@ Page({
             url: "/pages/contentlist/contentlist"
         });
     },
-    recTap: function () {
+    recTap: function (event) {
+        var contentid = event.currentTarget.dataset.contentid;
         wx.navigateTo({
-            url: "/pages/contentdetail/contentdetail"
+            url: "/pages/contentdetail/contentdetail?id=" + contentid
         });
     }
 })

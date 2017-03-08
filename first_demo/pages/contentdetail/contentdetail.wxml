@@ -1,14 +1,14 @@
 
 <!--文章详细-->
 <view class="container">
-  <image class="image_header" src="../../images/banner/1012.png"></image>
+  <image class="image_header" src="{{content_key.rec_image}}"></image>
   <view class="author_date">
     <image class="avater" src="../../images/icons/math.jpg"></image>
     <text class="author">second</text>
     <text class="const_text">发表于</text>
     <text class="date">time</text>
   </view>
-  <text class="title">这里是标题</text>
+  <text class="title">{{content_key.rec_title}}</text>
   <view class="tool">
     <view class="circle-img" >
       <image src="../../images/icons/collection.png"></image>
@@ -17,6 +17,6 @@
     <view class="horizon"></view>
   </view>
   <text class="detail" >
-    这里是正文
+    {{content_key.rec_content}}
   </text>
 </view>

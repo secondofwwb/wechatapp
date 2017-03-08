@@ -24,7 +24,7 @@
   <block wx:for="{{rec_key}}" wx:for-item="item">
 
     <!--template-->
-    <view bindtap="recTap">
+    <view bindtap="recTap" data-contentid="{{item.contentid}}">
       <template is="list" data="{{...item}}" />
     </view>
   </block>
