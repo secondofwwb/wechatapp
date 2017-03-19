@@ -8,6 +8,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10000,
         contentid: 0,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -18,6 +20,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10000,
         contentid: 1,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -28,6 +32,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10001,
         contentid: 2,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -38,6 +44,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10002,
         contentid: 3,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -48,6 +56,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10003,
         contentid: 4,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -58,6 +68,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10000,
         contentid: 5,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题，无图",
@@ -68,6 +80,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10001,
         contentid: 6,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题，无图",
@@ -78,6 +92,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10002,
         contentid: 7,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题，无图",
@@ -88,6 +104,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10003,
         contentid: 8,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题，无图",
@@ -98,6 +116,8 @@ var local_datas_cons = [
         collect_num: "65",
         contenttypeid: 10000,
         contentid: 9,
+        author:"second",
+        date:"2017-01-01"
     }
 
 ]
@@ -134,6 +154,8 @@ var local_datas_recs = [
         collect_num: "65",
         contenttypeid: 10000,
         contentid: 0,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -144,6 +166,8 @@ var local_datas_recs = [
         collect_num: "65",
         contenttypeid: 10000,
         contentid: 1,
+        author:"second",
+        date:"2017-01-01"
     },
     {
         content_title: "好吧，这是标题",
@@ -154,6 +178,8 @@ var local_datas_recs = [
         collect_num: "65",
         contenttypeid: 10001,
         contentid: 2,
+        author:"second",
+        date:"2017-01-01"
     }
 ]
 

@@ -1,22 +1,24 @@
 
 <!--文章详细-->
 <view class="container">
-  <image class="image_header" src="{{content_key.content_image}}"></image>
+  <block wx:if="{{content_key.content_image}}">
+    <image class="image_header" src="{{content_key.content_image}}"></image>
+  </block>
   <view class="author_date">
     <image class="avater" src="../../images/icons/math.jpg"></image>
-    <text class="author">second</text>
+    <text class="author">{{content_key.author}}</text>
     <text class="const_text">发表于</text>
-    <text class="date">time</text>
+    <text class="date">{{content_key.date}}</text>
   </view>
   <text class="title">{{content_key.content_title}}</text>
   <view class="tool">
-    <view class="circle-img" >
+    <view class="circle-img">
       <image src="../../images/icons/collection.png"></image>
       <image class="share-img" src="../../images/icons/share.png"></image>
     </view>
     <view class="horizon"></view>
   </view>
-  <text class="detail" >
+  <text class="detail">
     {{content_key.outline}}
   </text>
 </view>

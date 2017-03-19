@@ -4,7 +4,9 @@
   <view class="rec_container">
     <view class="rec_title">{{content_title}}</view>
     <view>
-      <image src="{{content_image}}" class="rec_image" mode="aspectFill"></image>
+      <block wx:if="{{content_image}}">
+        <image src="{{content_image}}" class="rec_image" mode="aspectFill"></image>
+      </block>
       <text class="rec_content">{{outline}}</text>
     </view>
     <view class="rec_like">
