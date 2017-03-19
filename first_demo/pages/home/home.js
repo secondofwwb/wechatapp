@@ -6,9 +6,8 @@ Page({
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
-        this.setData({ rec_key: postsData.postcons });
+        this.setData({ rec_key: postsData.postreccontent});
         this.setData({ icons_key: postsData.posticons });
-        this.setData({ banners_key: postsData.posbanners });
     },
     onShareAppMessage: function () {
         // 用户点击右上角分享
@@ -18,9 +17,17 @@ Page({
             path: 'path' // 分享路径
         }
     },
-    onTap: function () {
+    bannertap:function(event){
+        var contentid = event.currentTarget.dataset.contentid;
         wx.navigateTo({
-            url: "/pages/contentlist/contentlist"
+            url: "/pages/contentdetail/contentdetail?id=" + contentid
+        });
+    },
+    onTap: function (event) {
+        var labelid = event.currentTarget.dataset.labelid;
+        var icon_name = event.currentTarget.dataset.iconname;
+        wx.navigateTo({
+            url: "/pages/contentlist/contentlist?typeid=" + labelid + "&iconname=" + icon_name
         });
     },
     recTap: function (event) {

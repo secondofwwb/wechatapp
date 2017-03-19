@@ -3,7 +3,7 @@
 <import src="../../pages/list-template/list-template.wxml" />
 <view class="navbar">
   <view class="name">
-    英语
+    {{title_key}}
   </view>
   <view class="search">
     <image class="icon" src="../../images/icons/icon_search.png"></image>
@@ -11,7 +11,7 @@
   </view>
 </view>
 <view style="margin-top:70rpx;"></view>
-<block wx:for="{{rec_key}}" wx:for-item="item">
+<block wx:for="{{content_key}}" wx:for-item="item">
 
   <!--template-->
   <view catchtap="onContentid" data-contentid="{{item.contentid}}">
