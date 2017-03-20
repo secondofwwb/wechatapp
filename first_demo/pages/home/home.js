@@ -32,8 +32,9 @@ Page({
     },
     recTap: function (event) {
         var contentid = event.currentTarget.dataset.contentid;
+        var recimfor = event.currentTarget.dataset.recimfor;
         wx.navigateTo({
-            url: "/pages/contentdetail/contentdetail?id=" + contentid
+            url: "/pages/contentdetail/contentdetail?id=" + contentid + "&recimfor=" + recimfor
         });
     }
 })
