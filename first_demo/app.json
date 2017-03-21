@@ -1,10 +1,13 @@
 {
   "pages": [
+    
     "pages/home/home",
     "pages/contentdetail/contentdetail",
     "pages/contentlist/contentlist",
     "pages/forlogin/login_page/login_page",
-    "pages/forlogin/userlogin/userlogin"
+    "pages/forlogin/userlogin/userlogin",
+    "pages/forlogin/usercenter/usercenter"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

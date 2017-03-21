@@ -17,6 +17,6 @@
   </view>
 </view>
 <view class="login_button">
-  <text class="login_button1">拒绝</text>
-  <text class="login_button2">允许</text>
+  <text class="login_button1" catchtap="refusebut">拒绝</text>
+  <text class="login_button2" catchtap="agreebut">允许</text>
 </view>
