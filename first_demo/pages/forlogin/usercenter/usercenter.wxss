@@ -1,0 +1,50 @@
+.useravatar {
+  margin-top: 100rpx;
+  margin-bottom: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px;
+  padding-bottom: 30rpx;
+}
+
+.collect_title {
+  height: 60rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px;
+}
+
+.collect_font {
+  margin-left: 20rpx;
+  font-size: 40rpx;
+}
+
+.collect_content {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  width: 730rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px;
+}
+
+.titlefont {
+  margin-left: 20rpx;
+  font-size: 40rpx;
+}
+
+.contentfont{
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}

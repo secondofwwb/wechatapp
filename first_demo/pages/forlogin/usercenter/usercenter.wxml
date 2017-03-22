@@ -1,5 +1,17 @@
-<!--usercenter-->
 
+<!--usercenter-->
 <view>
-    <image src="src"></image>
+  <view class="userinfo">
+    <image class="useravatar" src="/images/icons/en.jpg"></image>
+    <text>账号名</text>
+  </view>
+  <view class="collect_title">
+    <text class="collect_font">个人收藏</text>
+  </view>
+  <view class="collect_content">
+    <text class="titlefont">收藏文章标题</text>
+    <view>
+      <text class="contentfont">简介</text>
+    </view>
+  </view>
 </view>
