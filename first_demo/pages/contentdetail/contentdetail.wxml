@@ -15,7 +15,7 @@
     <view class="circle-img">
       <image wx:if="{{switch_collection}}" catchtap="oncollection" src="../../images/icons/collection.png"></image>
       <image wx:else catchtap="oncollection" src="../../images/icons/collection-anti.png"></image>
-      <image class="share-img" src="../../images/icons/share.png"></image>
+      <image catchtap="onshare" class="share-img" src="../../images/icons/share.png"></image>
     </view>
     <view class="horizon"></view>
   </view>

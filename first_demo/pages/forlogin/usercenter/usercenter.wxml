@@ -2,8 +2,10 @@
 <!--usercenter-->
 <view>
   <view class="userinfo">
-    <image class="useravatar" src="/images/icons/en.jpg"></image>
-    <text>账号名</text>
+  <block catchtap="onlogin">
+    <image class="useravatar" src="{{userinfor.useravatar}}"></image>
+    <text>{{userinfor.username}}</text>
+   </block> 
   </view>
   <view class="collect_title">
     <text class="collect_font">个人收藏</text>

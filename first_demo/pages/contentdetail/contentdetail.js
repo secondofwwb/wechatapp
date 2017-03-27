@@ -51,7 +51,19 @@ Page({
     });
 
     wx.showToast({
-      title:be_collected?"收藏成功":"取消收藏"
+      title: be_collected ? "收藏成功" : "取消收藏"
+    })
+  },
+  onshare: function (event) {
+    wx.showActionSheet({
+      itemList: [
+        "分享给微信好友",
+        "分享到朋友圈",
+        "分享到到QQ",
+      ],
+      success: function (res) {
+        //功能待实现
+      },
     })
   },
   onShareAppMessage: function () {
