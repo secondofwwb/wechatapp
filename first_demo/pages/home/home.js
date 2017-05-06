@@ -1,4 +1,4 @@
-var postsData = require('../../data/data.js')
+// var postsData = require('../../data/data.js')
 
 Page({
     data: {
@@ -6,8 +6,8 @@ Page({
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
-        this.setData({ rec_key: postsData.postreccontent});
-        this.setData({ icons_key: postsData.posticons });
+        this.getrec();
+        this.geticons();
     },
     onShareAppMessage: function () {
         // 用户点击右上角分享
@@ -17,7 +17,34 @@ Page({
             path: 'path' // 分享路径
         }
     },
-    bannertap:function(event){
+
+    getrec: function (event) {
+        var that = this;
+        wx.request({
+            url: 'http://192.168.142.128:8000/api/content/REC/recimfor/',
+            data: {},
+            method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            header: { "content-Type": "json" }, // 设置请求的 header
+            success: function (res) {
+                that.setData({ rec_key: res.data });
+            },
+        })
+    },
+
+    geticons: function (event) {
+        var that = this;
+        wx.request({
+            url: 'http://192.168.142.128:8000/api/icon/',
+            data: {},
+            method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            header: { "content-Type": "json" }, // 设置请求的 header
+            success: function (res) {
+                 that.setData({ icons_key: res.data });
+            },
+        })
+    },
+
+    bannertap: function (event) {
         var contentid = event.currentTarget.dataset.contentid;
         wx.navigateTo({
             url: "/pages/contentdetail/contentdetail?id=" + contentid

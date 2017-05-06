@@ -1,4 +1,4 @@
-var postsData = require('../../data/data.js')
+// var postsData = require('../../data/data.js')
 
 Page({
   data: {
@@ -9,24 +9,7 @@ Page({
     var contentid = options.id;   //获取传递过来的id
     var is_rec = options.recimfor;
     this.data.curcontentid = contentid;
-    var contentdata = new Array();
-    if (is_rec == 1) {
-      for (var i = 0; i < postsData.postreccontent.length; i++) {
-        if (postsData.postreccontent[i].contentid == contentid) {
-          contentdata.push(postsData.postreccontent[i])
-        }
-      }
-    }
-    else {
-      for (var i = 0; i < postsData.postcons.length; i++) {
-        if (postsData.postcons[i].contentid == contentid) {
-          contentdata.push(postsData.postcons[i])
-        }
-      }
-    };
-
-    this.setData({ content_key: contentdata[0] });
-
+    this.getcontentdetail(contentid,is_rec);
     var sw_collected = wx.getStorageSync('sw_collection');
     if (sw_collected) {
       var be_collected = sw_collected[contentid];
@@ -39,6 +22,21 @@ Page({
       sw_collected[contentid] = false;
       wx.setStorageSync('sw_collection', sw_collected);
     }
+  },
+
+  getcontentdetail: function (contentid, is_rec) {
+    var that = this;
+    wx.request({
+      url: 'http://192.168.142.128:8000/api/content/' + contentid + '/contentbyid/',
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        "content-Type": "json"
+      }, // 设置请求的 header
+      success: function (res) {
+        that.setData({ content_key: res.data });
+      }
+    })
   },
   oncollection: function (event) {
     var sw_collected = wx.getStorageSync('sw_collection');
