@@ -1,12 +1,12 @@
 
 <!--home.wxml-->
 <import src="../../pages/list-template/list-template.wxml" />
-<scroll-view scroll-y="true" style="height:700px;">
+<scroll-view scroll-y="true" style="height:700px;" enable-back-to-top="true" bindscrolltolower="scrollupper" lower-threshold="1">
 
   <!--轮播图-->
   <view>
     <swiper indicator-dots="true" autoplay="true" interval="5000" style="height:300rpx;">
-      <swiper-item wx:for="{{rec_key}}" bindtap="bannertap" data-contentid="{{item.contentid}}">
+      <swiper-item wx:for="{{banner_key}}" bindtap="bannertap" data-contentid="{{item.contentid}}">
         <image src="{{item.content_image}}" class="banner_image"></image>
       </swiper-item>
     </swiper>
