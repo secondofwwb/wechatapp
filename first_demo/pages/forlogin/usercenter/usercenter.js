@@ -18,5 +18,10 @@ Page({
       desc: 'desc', // 分享描述
       path: 'path' // 分享路径
     }
+  },
+  iwantlogin: function(){
+    wx.redirectTo({
+      url: '../userlogin/userlogin'
+    })
   }
 })

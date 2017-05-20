@@ -4,7 +4,7 @@
   <view class="userinfo">
   <block catchtap="onlogin">
     <image class="useravatar" src="{{userinfor.useravatar}}"></image>
-    <text>{{userinfor.username}}</text>
+    <text catchtap="iwantlogin">{{userinfor.username}}</text>
    </block> 
   </view>
   <view class="collect_title">
