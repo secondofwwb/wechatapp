@@ -1,5 +1,5 @@
 // var postsData = require('../../data/data.js')
-
+var appInstance = getApp()
 Page({
   data: {
 
@@ -27,11 +27,11 @@ Page({
   getcontentdetail: function (contentid, is_rec) {
     var that = this;
     wx.request({
-      url: 'http://192.168.142.128:8000/api/content/' + contentid + '/contentbyid/',
+      url: 'https://192.168.142.128/api/content/' + contentid + '/contentbyid/',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: {
-        "content-Type": "json"
+        'Authorization': 'Token ' + appInstance.globalData.servertoken,
       }, // 设置请求的 header
       success: function (res) {
         that.setData({ content_key: res.data });

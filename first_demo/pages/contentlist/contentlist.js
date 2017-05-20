@@ -1,4 +1,4 @@
-
+var appInstance = getApp()
 Page({
   data: {
     allcontent: {},
@@ -17,11 +17,11 @@ Page({
   getdata: function (dataid, titlename) {
     var that = this;
     wx.request({
-      url: 'http://192.168.142.128:8000/api/content/' + dataid + '/contentbytype/?page=0',
+      url: 'https://192.168.142.128/api/content/' + dataid + '/contentbytype/?page=0',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: {
-        "content-Type": "json"
+        'Authorization': 'Token ' + appInstance.globalData.servertoken,
       }, // 设置请求的 header
       success: function (res) {
         that.setData({ content_key: res.data });
@@ -41,21 +41,21 @@ Page({
     })
   },
   scrollupper: function (event) {
+    wx.showNavigationBarLoading();
     var that = this;
     var count = this.data.contentcount;
     var empty = this.data.is_empty;
     var content = this.data.content_key;
-    console.log(content);
     if (empty) {
       console.log("加载错误")
     }
     else {
       wx.request({
-        url: 'http://192.168.142.128:8000/api/content/' + this.data.dataid_key + '/contentbytype/?page=' + count,
+        url: 'https://192.168.142.128/api/content/' + this.data.dataid_key + '/contentbytype/?page=' + count,
         data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECTd
         header: {
-          "content-Type": "json"
+          'Authorization': 'Token ' + appInstance.globalData.servertoken,
         }, // 设置请求的 header
         success: function (res) {
           content = content.concat(res.data);
@@ -66,10 +66,13 @@ Page({
         },
         fail: function () {
           console.log("fail")
+        },
+        complete: function(){
+          wx.hideNavigationBarLoading();
         }
       })
     };
-
+    
   },
 
 })

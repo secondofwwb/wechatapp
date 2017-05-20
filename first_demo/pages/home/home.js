@@ -1,5 +1,5 @@
 // var postsData = require('../../data/data.js')
-
+var appInstance = getApp()
 Page({
   data: {
     count: 0,
@@ -24,10 +24,12 @@ Page({
   getrec: function (event) {
     var that = this;
     wx.request({
-      url: 'http://192.168.142.128:8000/api/content/REC/recimfor/?page=0',
+      url: 'https://192.168.142.128/api/content/REC/recimfor/?page=0',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: { "content-Type": "json" }, // 设置请求的 header
+      header: {
+        'Authorization': 'Token ' + appInstance.globalData.servertoken,
+      }, // 设置请求的 header
       success: function (res) {
         that.setData({ rec_key: res.data });
         that.setData({ banner_key: res.data });
@@ -40,10 +42,10 @@ Page({
   geticons: function (event) {
     var that = this;
     wx.request({
-      url: 'http://192.168.142.128:8000/api/icon/',
+      url: 'https://192.168.142.128/api/icon/',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: { "content-Type": "json" }, // 设置请求的 header
+      header: { 'Authorization': 'Token ' + appInstance.globalData.servertoken, }, // 设置请求的 header
       success: function (res) {
         that.setData({ icons_key: res.data });
       },
@@ -80,18 +82,18 @@ Page({
     }
     else {
       wx.request({
-        url: 'http://192.168.142.128:8000/api/content/REC/recimfor/?page=' + rec_count,
+        url: 'https://192.168.142.128/api/content/REC/recimfor/?page=' + rec_count,
         data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        header: { "content-Type": "json" }, // 设置请求的 header
+        header: { 'Authorization': 'Token ' + appInstance.globalData.servertoken,}, // 设置请求的 header
         success: function (res) {
           rec_count = rec_count + 1;
           reccon = reccon.concat(res.data);
           that.setData({ rec_key: reccon });
-          that.setData({ count: rec_count});
+          that.setData({ count: rec_count });
         },
       })
     };
-    
+
   }
 })
